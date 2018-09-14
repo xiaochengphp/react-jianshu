@@ -1,0 +1,69 @@
+.header{
+    height: 56px;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+    &::after{
+        clear: both;
+    }
+    .logo{
+        display: flex;
+        width: 100px;
+        height: 100%;
+        text-indent: 9999px;
+        background-size: contain;
+        cursor: pointer;
+    }
+    .nav{
+        flex: 1;
+        // display: flex;
+        .nav-item{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 0 15px;
+            font-size: 18px;
+            &:hover{
+                color: #ea6f5a;
+                background: #eee;
+                cursor: pointer;
+                user-select: none;
+            }
+            &.active{
+                color: #ea6f5a;
+            }
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .search{
+            height: 30px;
+            border-radius: 30px;
+            outline: none;
+            overflow: hidden;
+            border: 1px solid #ea6f5a;
+            margin: 13px 0;
+            padding: 0 10px;
+            &.searchTransition-enter{
+                width: 160px;
+                transition: all .2s ease-out;
+            }
+            &.searchTransition-enter-active,
+            &.searchTransition-enter-done{
+                width: 240px;
+            }
+            &.searchTransition-exit{
+                width: 240px;
+                transition: all .2s ease-out;
+            }
+            &.searchTransition-exit-active,
+            &.searchTransition-exit-done{
+                width: 160px;
+            }
+        }
+    }
+}
